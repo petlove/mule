@@ -1,0 +1,4 @@
+TODO
+/coverage/*
+.rspec_status
+*.gem
