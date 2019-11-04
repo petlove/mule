@@ -1,20 +1,20 @@
 # frozen_string_literal: true
 
 $LOAD_PATH.push File.expand_path('lib', __dir__)
-require 'my_gem/version'
+require 'mule/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'my_gem'
-  spec.version       = MyGem::VERSION
+  spec.name          = 'mule'
+  spec.version       = Mule::VERSION
   spec.authors       = ['linqueta']
   spec.email         = ['lincolnrodrs@gmail.com']
 
-  spec.summary       = 'my_gem'
-  spec.description   = 'my_gem'
-  spec.homepage      = 'https://https://github.com/petlove/my_gem'
+  spec.summary       = 'Parse Integration'
+  spec.description   = 'Parse Integration'
+  spec.homepage      = 'https://https://github.com/petlove/mule'
   spec.license       = 'MIT'
 
-  spec.files         = Dir['{app,config,lib}/**/*', 'CHANGELOG.md', 'MIT-LICENSE', 'README.md']
+  spec.files         = Dir['{config,lib}/**/*', 'CHANGELOG.md', 'MIT-LICENSE', 'README.md']
 
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'pry-byebug', '>= 3.7.0'
