@@ -5,7 +5,7 @@ require 'support/configs/simple_cov_config'
 require 'support/configs/vcr_config'
 SimpleCovConfig.configure
 
-require 'my_gem'
+require 'mule'
 require 'pry'
 VCRConfig.configure
 

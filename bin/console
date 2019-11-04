@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'my_gem'
+require 'mule'
 require 'irb'
 require 'pry'
 
