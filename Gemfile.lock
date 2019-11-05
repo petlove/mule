@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/petlove/falcon.git
-  revision: d61a297d0c1429b4426fe67e9fe9216c58aa6c01
+  revision: f5f8a8934dff20747f422ce8f5b6b91b680885a3
   specs:
     falcon (1.0.0)
       faraday (>= 0.17.0)
@@ -24,6 +24,7 @@ GEM
       safe_yaml (~> 1.0.0)
     diff-lcs (1.3)
     docile (1.3.2)
+    dotenv (2.7.5)
     faraday (0.17.0)
       multipart-post (>= 1.2, < 3)
     hashdiff (1.0.0)
@@ -90,6 +91,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 2.0)
+  dotenv (~> 2.7.5)
   falcon!
   mule!
   pry-byebug (>= 3.7.0)

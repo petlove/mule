@@ -7,6 +7,10 @@ SimpleCovConfig.configure
 
 require 'mule'
 require 'pry'
+require 'dotenv'
+
+Dotenv.load('.env.test')
+
 VCRConfig.configure
 
 RSpec.configure do |config|

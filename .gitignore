@@ -3,3 +3,5 @@ TODO
 .rspec_status
 *.gem
 /config/*
+*.development
+*.test
