@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: ENV[PARSE_URL]/parse/users/ENV[PARSE_USER_ID]
+    uri: ENV[PARSE_URL]/parse/users/ENV[PARSE_USER_OBJECT_ID]
     body:
       encoding: US-ASCII
       string: ''
@@ -50,8 +50,8 @@ http_interactions:
       - W/"20f-WdTBCs1y63y8jJ4V0qi4iktcVLw"
     body:
       encoding: ASCII-8BIT
-      string: '{"objectId":"ENV[PARSE_USER_ID]","appDC":true,"username":"lincoln.rodrs@gmail.com","createdAt":"2019-10-07T19:34:46.660Z","updatedAt":"2019-10-14T13:03:18.917Z","notificationPrefs":{"vetsmart_push":true,"streaming_app":true,"vetsmart_app":true,"vetsmart_email":true,"streaming_email":true,"streaming_push":true},"specializationList":[],"fullName":"lincoln
-        soares ","countryId":"BRA","termsAndPolicyVersion":"1.0","stateId":"","occupationId":"","weeklyAppointment":null,"ACL":{"*":{"read":true},"ENV[PARSE_USER_ID]":{"read":true,"write":true}}}'
-    http_version: 
+      string: '{"objectId":"ENV[PARSE_USER_OBJECT_ID]","appDC":true,"username":"lincoln.rodrs@gmail.com","createdAt":"2019-10-07T19:34:46.660Z","updatedAt":"2019-10-14T13:03:18.917Z","notificationPrefs":{"vetsmart_push":true,"streaming_app":true,"vetsmart_app":true,"vetsmart_email":true,"streaming_email":true,"streaming_push":true},"specializationList":[],"fullName":"lincoln
+        soares ","countryId":"BRA","termsAndPolicyVersion":"1.0","stateId":"","occupationId":"","weeklyAppointment":null,"ACL":{"*":{"read":true},"ENV[PARSE_USER_OBJECT_ID]":{"read":true,"write":true}}}'
+    http_version:
   recorded_at: Wed, 06 Nov 2019 13:56:51 GMT
 recorded_with: VCR 5.0.0

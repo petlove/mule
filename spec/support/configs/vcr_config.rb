@@ -8,7 +8,7 @@ class VCRConfig
     PARSE_URL
     PARSE_APPLICATION_ID
     PARSE_REST_API_KEY
-    PARSE_USER_ID
+    PARSE_USER_OBJECT_ID
   ].freeze
 
   def self.configure

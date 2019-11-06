@@ -3,6 +3,7 @@
 require 'falcon'
 require 'mule/version'
 require 'mule/configuration'
+require 'mule/resources/handler'
 require 'mule/resources/user'
 
 module Mule
