@@ -16,7 +16,12 @@ Gem::Specification.new do |spec|
 
   spec.files         = Dir['{config,lib}/**/*', 'CHANGELOG.md', 'MIT-LICENSE', 'README.md']
 
+  spec.add_dependency 'falcon'
+
+  spec.add_development_dependency 'awesome_print', '>= 1.8.0'
   spec.add_development_dependency 'bundler', '~> 2.0'
+  spec.add_development_dependency 'dotenv', '~> 2.7.5'
+  spec.add_development_dependency 'json_matchers', '>= 0.11.1'
   spec.add_development_dependency 'pry-byebug', '>= 3.7.0'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'

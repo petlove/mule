@@ -1,0 +1,266 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "objectId",
+    "appDC",
+    "username",
+    "createdAt",
+    "updatedAt",
+    "notificationPrefs",
+    "specializationList",
+    "fullName",
+    "countryId",
+    "termsAndPolicyVersion",
+    "stateId",
+    "occupationId",
+    "weeklyAppointment",
+    "ACL"
+  ],
+  "properties": {
+    "objectId": {
+      "$id": "#/properties/objectId",
+      "type": "string",
+      "title": "The Objectid Schema",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^(.*)$"
+    },
+    "appDC": {
+      "$id": "#/properties/appDC",
+      "type": "boolean",
+      "title": "The Appdc Schema",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "username": {
+      "$id": "#/properties/username",
+      "type": "string",
+      "title": "The Username Schema",
+      "default": "",
+      "examples": [
+        "lincoln.rodrs@gmail.com"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "createdAt": {
+      "$id": "#/properties/createdAt",
+      "type": "string",
+      "title": "The Createdat Schema",
+      "default": "",
+      "examples": [
+        "2019-10-07T19:34:46.660Z"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "updatedAt": {
+      "$id": "#/properties/updatedAt",
+      "type": "string",
+      "title": "The Updatedat Schema",
+      "default": "",
+      "examples": [
+        "2019-10-14T13:03:18.917Z"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "notificationPrefs": {
+      "$id": "#/properties/notificationPrefs",
+      "type": "object",
+      "title": "The Notificationprefs Schema",
+      "required": [
+        "vetsmart_push",
+        "streaming_app",
+        "vetsmart_app",
+        "vetsmart_email",
+        "streaming_email",
+        "streaming_push"
+      ],
+      "properties": {
+        "vetsmart_push": {
+          "$id": "#/properties/notificationPrefs/properties/vetsmart_push",
+          "type": "boolean",
+          "title": "The Vetsmart_push Schema",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "streaming_app": {
+          "$id": "#/properties/notificationPrefs/properties/streaming_app",
+          "type": "boolean",
+          "title": "The Streaming_app Schema",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "vetsmart_app": {
+          "$id": "#/properties/notificationPrefs/properties/vetsmart_app",
+          "type": "boolean",
+          "title": "The Vetsmart_app Schema",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "vetsmart_email": {
+          "$id": "#/properties/notificationPrefs/properties/vetsmart_email",
+          "type": "boolean",
+          "title": "The Vetsmart_email Schema",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "streaming_email": {
+          "$id": "#/properties/notificationPrefs/properties/streaming_email",
+          "type": "boolean",
+          "title": "The Streaming_email Schema",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "streaming_push": {
+          "$id": "#/properties/notificationPrefs/properties/streaming_push",
+          "type": "boolean",
+          "title": "The Streaming_push Schema",
+          "default": false,
+          "examples": [
+            true
+          ]
+        }
+      }
+    },
+    "specializationList": {
+      "$id": "#/properties/specializationList",
+      "type": "array",
+      "title": "The Specializationlist Schema"
+    },
+    "fullName": {
+      "$id": "#/properties/fullName",
+      "type": "string",
+      "title": "The Fullname Schema",
+      "default": "",
+      "examples": [
+        "lincoln soares "
+      ],
+      "pattern": "^(.*)$"
+    },
+    "countryId": {
+      "$id": "#/properties/countryId",
+      "type": "string",
+      "title": "The Countryid Schema",
+      "default": "",
+      "examples": [
+        "BRA"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "termsAndPolicyVersion": {
+      "$id": "#/properties/termsAndPolicyVersion",
+      "type": "string",
+      "title": "The Termsandpolicyversion Schema",
+      "default": "",
+      "examples": [
+        "1.0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "stateId": {
+      "$id": "#/properties/stateId",
+      "type": "string",
+      "title": "The Stateid Schema",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^(.*)$"
+    },
+    "occupationId": {
+      "$id": "#/properties/occupationId",
+      "type": "string",
+      "title": "The Occupationid Schema",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^(.*)$"
+    },
+    "weeklyAppointment": {
+      "$id": "#/properties/weeklyAppointment",
+      "type": "null",
+      "title": "The Weeklyappointment Schema",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "ACL": {
+      "$id": "#/properties/ACL",
+      "type": "object",
+      "title": "The Acl Schema",
+      "required": [
+        "*",
+        "uQ0SKvycQS"
+      ],
+      "properties": {
+        "*": {
+          "$id": "#/properties/ACL/properties/*",
+          "type": "object",
+          "title": "The * Schema",
+          "required": [
+            "read"
+          ],
+          "properties": {
+            "read": {
+              "$id": "#/properties/ACL/properties/*/properties/read",
+              "type": "boolean",
+              "title": "The Read Schema",
+              "default": false,
+              "examples": [
+                true
+              ]
+            }
+          }
+        },
+        "uQ0SKvycQS": {
+          "$id": "#/properties/ACL/properties/uQ0SKvycQS",
+          "type": "object",
+          "title": "The Uq0skvycqs Schema",
+          "required": [
+            "read",
+            "write"
+          ],
+          "properties": {
+            "read": {
+              "$id": "#/properties/ACL/properties/uQ0SKvycQS/properties/read",
+              "type": "boolean",
+              "title": "The Read Schema",
+              "default": false,
+              "examples": [
+                true
+              ]
+            },
+            "write": {
+              "$id": "#/properties/ACL/properties/uQ0SKvycQS/properties/write",
+              "type": "boolean",
+              "title": "The Write Schema",
+              "default": false,
+              "examples": [
+                true
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
