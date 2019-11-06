@@ -11,7 +11,7 @@ RSpec.describe Mule::Resources::User, type: :model do
     context 'with unknown user' do
       let(:user_object_id) { '123456' }
 
-      it { expect { subject }.to raise_error(Mule::Resources::NotFoundError) }
+      it { expect { subject }.to raise_error(Mule::Resources::NotFoundError, "The user can't be found") }
       it { expect(rescue_unknown_user_error.response.code).to eq(404) }
       it { expect(rescue_unknown_user_error.response.body).to match_response_schema('resources/user/find_404') }
 

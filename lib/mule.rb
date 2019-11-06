@@ -5,6 +5,7 @@ require 'mule/version'
 require 'mule/configuration'
 require 'mule/resources/handler'
 require 'mule/resources/user'
+require 'mule/user'
 
 module Mule
   require 'mule/railtie' if defined?(Rails)
