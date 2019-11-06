@@ -5,7 +5,7 @@ require 'mule/resources/errors/not_found_error'
 module Mule
   module Resources
     module Handler
-      NOT_FOUND_RESPOPNSE_CODE = 404
+      NOT_FOUND_RESPONSE_CODE = 404
 
       def handle!(response, model)
         handler_error!(response, model)
@@ -20,7 +20,7 @@ module Mule
       end
 
       def handle_not_found!(response, model)
-        return unless response.code == NOT_FOUND_RESPOPNSE_CODE
+        return unless response.code == NOT_FOUND_RESPONSE_CODE
 
         raise NotFoundError.new(response, model)
       end
