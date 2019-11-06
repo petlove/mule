@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'securerandom'
 
 RSpec.describe Mule::Configuration, type: :model do
   describe '#initialize' do

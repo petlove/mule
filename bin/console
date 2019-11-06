@@ -6,6 +6,7 @@ require 'mule'
 require 'irb'
 require 'pry'
 require 'dotenv'
+require 'awesome_print'
 
 Dotenv.load('.env.development')
 

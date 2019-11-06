@@ -14,7 +14,7 @@ RSpec.describe Mule, type: :module do
       end
     end
 
-    let(:url) { 'https://parse.parseaccount.com.br/parse/users/g7y9tkhB7O' }
+    let(:url) { 'https://parse.parseaccount.com.br/parse/users' }
     let(:application_id) { SecureRandom.uuid }
     let(:rest_api_key) { SecureRandom.uuid }
 

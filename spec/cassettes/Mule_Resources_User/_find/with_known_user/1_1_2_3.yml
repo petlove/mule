@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: ENV[PARSE_URL]/parse/users/ENV[PARSE_USER_ID]
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Parse-Application-Id:
+      - ENV[PARSE_APPLICATION_ID]
+      X-Parse-Rest-Api-Key:
+      - ENV[PARSE_REST_API_KEY]
+      User-Agent:
+      - Faraday v0.17.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 06 Nov 2019 13:56:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx/1.12.1
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE,OPTIONS
+      Access-Control-Allow-Headers:
+      - X-Parse-Master-Key, X-Parse-REST-API-Key, X-Parse-Javascript-Key, X-Parse-Application-Id,
+        X-Parse-Client-Version, X-Parse-Session-Token, X-Requested-With, X-Parse-Revocable-Session,
+        Content-Type
+      Access-Control-Expose-Headers:
+      - X-Parse-Job-Status-Id, X-Parse-Push-Status-Id
+      Etag:
+      - W/"20f-WdTBCs1y63y8jJ4V0qi4iktcVLw"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"objectId":"ENV[PARSE_USER_ID]","appDC":true,"username":"lincoln.rodrs@gmail.com","createdAt":"2019-10-07T19:34:46.660Z","updatedAt":"2019-10-14T13:03:18.917Z","notificationPrefs":{"vetsmart_push":true,"streaming_app":true,"vetsmart_app":true,"vetsmart_email":true,"streaming_email":true,"streaming_push":true},"specializationList":[],"fullName":"lincoln
+        soares ","countryId":"BRA","termsAndPolicyVersion":"1.0","stateId":"","occupationId":"","weeklyAppointment":null,"ACL":{"*":{"read":true},"ENV[PARSE_USER_ID]":{"read":true,"write":true}}}'
+    http_version: 
+  recorded_at: Wed, 06 Nov 2019 13:56:51 GMT
+recorded_with: VCR 5.0.0
