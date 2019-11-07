@@ -1,0 +1,183 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "objectId",
+    "sessionToken",
+    "user",
+    "createdWith",
+    "restricted",
+    "expiresAt",
+    "installationId",
+    "createdAt",
+    "updatedAt"
+  ],
+  "properties": {
+    "objectId": {
+      "$id": "#/properties/objectId",
+      "type": "string",
+      "title": "The Objectid Schema",
+      "default": "",
+      "examples": [
+        "123456"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "sessionToken": {
+      "$id": "#/properties/sessionToken",
+      "type": "string",
+      "title": "The Sessiontoken Schema",
+      "default": "",
+      "examples": [
+        "123456"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "user": {
+      "$id": "#/properties/user",
+      "type": "object",
+      "title": "The User Schema",
+      "required": [
+        "__type",
+        "className",
+        "objectId"
+      ],
+      "properties": {
+        "__type": {
+          "$id": "#/properties/user/properties/__type",
+          "type": "string",
+          "title": "The __type Schema",
+          "default": "",
+          "examples": [
+            "Pointer"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "className": {
+          "$id": "#/properties/user/properties/className",
+          "type": "string",
+          "title": "The Classname Schema",
+          "default": "",
+          "examples": [
+            "_User"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "objectId": {
+          "$id": "#/properties/user/properties/objectId",
+          "type": "string",
+          "title": "The Objectid Schema",
+          "default": "",
+          "examples": [
+            "123456"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "createdWith": {
+      "$id": "#/properties/createdWith",
+      "type": "object",
+      "title": "The Createdwith Schema",
+      "required": [
+        "action",
+        "authProvider"
+      ],
+      "properties": {
+        "action": {
+          "$id": "#/properties/createdWith/properties/action",
+          "type": "string",
+          "title": "The Action Schema",
+          "default": "",
+          "examples": [
+            "login"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "authProvider": {
+          "$id": "#/properties/createdWith/properties/authProvider",
+          "type": "string",
+          "title": "The Authprovider Schema",
+          "default": "",
+          "examples": [
+            "anonymous"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "restricted": {
+      "$id": "#/properties/restricted",
+      "type": "boolean",
+      "title": "The Restricted Schema",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "expiresAt": {
+      "$id": "#/properties/expiresAt",
+      "type": "object",
+      "title": "The Expiresat Schema",
+      "required": [
+        "__type",
+        "iso"
+      ],
+      "properties": {
+        "__type": {
+          "$id": "#/properties/expiresAt/properties/__type",
+          "type": "string",
+          "title": "The __type Schema",
+          "default": "",
+          "examples": [
+            "Date"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "iso": {
+          "$id": "#/properties/expiresAt/properties/iso",
+          "type": "string",
+          "title": "The Iso Schema",
+          "default": "",
+          "examples": [
+            "2020-10-13T13:03:19.256Z"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "installationId": {
+      "$id": "#/properties/installationId",
+      "type": "string",
+      "title": "The Installationid Schema",
+      "default": "",
+      "examples": [
+        "123456"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "createdAt": {
+      "$id": "#/properties/createdAt",
+      "type": "string",
+      "title": "The Createdat Schema",
+      "default": "",
+      "examples": [
+        "2019-10-14T13:03:19.256Z"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "updatedAt": {
+      "$id": "#/properties/updatedAt",
+      "type": "string",
+      "title": "The Updatedat Schema",
+      "default": "",
+      "examples": [
+        "2019-10-14T13:03:19.256Z"
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}
