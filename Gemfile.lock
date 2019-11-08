@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/petlove/falcon.git
-  revision: 5b3db59136fafc5b3ffc490f293e98930ea8adfb
+  revision: 3ab9decb57ff10c7e318d314b8e3ba9096cec40c
   specs:
     falcon (1.0.0)
       faraday (>= 0.17.0)

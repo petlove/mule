@@ -10,7 +10,7 @@ module Mule
 
       falcon_options :parse, path: 'parse/users'
 
-      def self.find(object_id)
+      def self.find!(object_id)
         get(
           suffix: object_id,
           after: ->(response) { handle!(response, MODEL) }

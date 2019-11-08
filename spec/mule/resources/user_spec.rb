@@ -4,7 +4,7 @@ require 'spec_helper'
 
 RSpec.describe Mule::Resources::User, type: :model do
   describe '#find', :vcr do
-    subject { described_class.find(user_object_id) }
+    subject { described_class.find!(user_object_id) }
 
     before { configuration_by_environments! }
 
