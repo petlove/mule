@@ -78,6 +78,8 @@ RSpec.describe Mule::User, type: :model do
   describe '#find!', :vcr do
     subject { described_class.find!(object_id) }
 
+    before { configuration_by_environments! }
+
     context 'with unknown user' do
       let(:object_id) { '123456' }
 

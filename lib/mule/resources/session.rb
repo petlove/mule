@@ -10,7 +10,7 @@ module Mule
 
       falcon_options :parse, path: 'parse/sessions'
 
-      def self.find(session_token)
+      def self.find!(session_token)
         get(
           suffix: 'me',
           after: ->(response) { handle!(response, MODEL) },

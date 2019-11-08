@@ -27,7 +27,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 08 Nov 2019 16:15:42 GMT
+      - Fri, 08 Nov 2019 16:15:20 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -54,5 +54,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"code":209,"error":"Invalid session token"}'
     http_version: 
-  recorded_at: Fri, 08 Nov 2019 16:15:42 GMT
+  recorded_at: Fri, 08 Nov 2019 16:15:20 GMT
 recorded_with: VCR 5.0.0

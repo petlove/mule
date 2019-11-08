@@ -4,7 +4,7 @@ require 'spec_helper'
 
 RSpec.describe Mule::Resources::Session, type: :model do
   describe '#find', :vcr do
-    subject { described_class.find(session_token) }
+    subject { described_class.find!(session_token) }
 
     before { configuration_by_environments! }
 
