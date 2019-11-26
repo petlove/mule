@@ -2,7 +2,7 @@
 
 require 'fileutils'
 
-FALCON_INITILIAZER_FILE = 'config/initializers/mule.rb'
+MULE_INITILIAZER_FILE = 'config/initializers/mule.rb'
 
 namespace :mule do
   desc 'Install Mule'
@@ -12,12 +12,12 @@ namespace :mule do
 end
 
 def create_initializer
-  FileUtils.mkdir_p(File.dirname(FALCON_INITILIAZER_FILE))
-  File.open(FALCON_INITILIAZER_FILE, 'w') { |file| file << settings }
+  FileUtils.mkdir_p(File.dirname(MULE_INITILIAZER_FILE))
+  File.open(MULE_INITILIAZER_FILE, 'w') { |file| file << settings }
 end
 
 def settings
-  <<~FALCON_INITILIAZER_FILE
+  <<~MULE_INITILIAZER_FILE
     # frozen_string_literal: true
 
     Mule.configure do |config|
@@ -25,5 +25,5 @@ def settings
       config.application_id = ENV['PARSE_APPLICATION_ID']
       config.rest_api_key = ENV['PARSE_REST_API_KEY']
     end
-  FALCON_INITILIAZER_FILE
+  MULE_INITILIAZER_FILE
 end
