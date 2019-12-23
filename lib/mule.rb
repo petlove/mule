@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'falcon'
+require 'eezee'
 require 'mule/version'
 require 'mule/configuration'
 require 'mule/resources/handler'

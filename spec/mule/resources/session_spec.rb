@@ -25,7 +25,7 @@ RSpec.describe Mule::Resources::Session, type: :model do
     context 'with known session' do
       let(:session_token) { ENV['PARSE_SESSION_TOKEN'] }
 
-      it { is_expected.to be_a(Falcon::Response) }
+      it { is_expected.to be_a(Eezee::Response) }
       it { expect(subject.code).to eq(200) }
       it { expect(subject.body).to match_response_schema('resources/session/find_200') }
     end
