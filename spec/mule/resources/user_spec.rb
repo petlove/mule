@@ -25,7 +25,7 @@ RSpec.describe Mule::Resources::User, type: :model do
     context 'with known user' do
       let(:user_object_id) { ENV['PARSE_USER_OBJECT_ID'] }
 
-      it { is_expected.to be_a(Falcon::Response) }
+      it { is_expected.to be_a(Eezee::Response) }
       it { expect(subject.code).to eq(200) }
       it { expect(subject.body).to match_response_schema('resources/user/find_200') }
     end

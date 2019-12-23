@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
 
   spec.files         = Dir['{config,lib}/**/*', 'CHANGELOG.md', 'MIT-LICENSE', 'README.md']
 
-  spec.add_dependency 'falcon'
+  spec.add_dependency 'eezee'
 
   spec.add_development_dependency 'awesome_print', '>= 1.8.0'
   spec.add_development_dependency 'bundler', '~> 2.0'

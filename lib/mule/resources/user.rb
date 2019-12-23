@@ -3,17 +3,18 @@
 module Mule
   module Resources
     class User
-      extend Falcon::Client
+      extend Eezee::Client
       extend Handler
 
       MODEL = :user
 
-      falcon_options :parse, path: 'parse/users'
+      eezee_service :parse, lazy: true
+      eezee_request_options path: 'parse/users/:user_id'
 
-      def self.find!(object_id)
+      def self.find!(user_id)
         get(
-          suffix: object_id,
-          after: ->(response) { handle!(response, MODEL) }
+          params: { user_id: user_id },
+          after: ->(_req, res) { handle!(res, MODEL) }
         )
       end
     end
