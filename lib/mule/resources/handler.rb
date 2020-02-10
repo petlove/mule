@@ -7,6 +7,7 @@ module Mule
     module Handler
       NOT_FOUND_RESPONSE_CODE = 404
       BAD_REQUEST_RESPONSE_CODE = 400
+      INVALID_REQUEST_RESPONSE_CODE = 400
 
       def handle!(response, model)
         handler_error!(response, model)
@@ -23,6 +24,7 @@ module Mule
 
       def handle_bad_request!(response, model)
         raise_error(NotFoundError, BAD_REQUEST_RESPONSE_CODE, response, model) if model == :session
+        raise_error(NotFoundError, INVALID_REQUEST_RESPONSE_CODE, response, model) if model == :function
       end
 
       def handle_not_found!(response, model)
