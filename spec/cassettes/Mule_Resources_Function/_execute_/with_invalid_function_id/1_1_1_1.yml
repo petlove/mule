@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: ENV[PARSE_URL]/parse/functions/unknown_function_id
+    body:
+      encoding: UTF-8
+      string: '{"userId":"n0xjdsdxRNasaIK2a","credit":25,"clientName":"Lincoln Rodrigues"}'
+    headers:
+      Content-Type:
+      - application/json
+      X-Parse-Application-Id:
+      - ENV[PARSE_APPLICATION_ID]
+      X-Parse-Rest-Api-Key:
+      - ENV[PARSE_REST_API_KEY]
+      User-Agent:
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Mon, 10 Feb 2020 16:18:04 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '64'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx/1.12.1
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE,OPTIONS
+      Access-Control-Allow-Headers:
+      - X-Parse-Master-Key, X-Parse-REST-API-Key, X-Parse-Javascript-Key, X-Parse-Application-Id,
+        X-Parse-Client-Version, X-Parse-Session-Token, X-Requested-With, X-Parse-Revocable-Session,
+        Content-Type
+      Access-Control-Expose-Headers:
+      - X-Parse-Job-Status-Id, X-Parse-Push-Status-Id
+      Etag:
+      - W/"40-ZArabTfmTcwzMQxDrF6eqPaACds"
+    body:
+      encoding: UTF-8
+      string: '{"code":141,"error":"Invalid function: \"unknown_function_id\""}'
+    http_version: null
+  recorded_at: Mon, 10 Feb 2020 16:18:04 GMT
+recorded_with: VCR 5.1.0

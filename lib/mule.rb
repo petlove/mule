@@ -6,9 +6,11 @@ require 'mule/configuration'
 require 'mule/resources/handler'
 require 'mule/resources/user'
 require 'mule/resources/session'
+require 'mule/resources/function'
 require 'mule/base'
 require 'mule/user'
 require 'mule/session'
+require 'mule/function'
 
 module Mule
   require 'mule/railtie' if defined?(Rails)
