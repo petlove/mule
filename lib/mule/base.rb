@@ -19,8 +19,10 @@ module Mule
     end
 
     def attributes!(params, accessors)
-      self.class.normalize(params)
-          .tap { build_accessors!(_1, accessors) }
+      self
+        .class
+        .normalize(params)
+        .tap { build_accessors!(_1, accessors) }
         .tap { timestamps! }
     end
 
