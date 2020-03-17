@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: get
-    uri: ENV[PARSE_URL]/parse/sessions/me
+    uri: ENV[PARSE_URL]/parse/login
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: '{"username":"muletest@mule.com.br","password":"123456"}'
     headers:
       Content-Type:
       - application/json
@@ -13,29 +13,27 @@ http_interactions:
       - ENV[PARSE_APPLICATION_ID]
       X-Parse-Rest-Api-Key:
       - ENV[PARSE_REST_API_KEY]
-      X-Parse-Session-Token:
-      - '123456'
       User-Agent:
-      - Faraday v0.17.0
+      - Faraday v1.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 404
+      message: Not Found
     headers:
       Date:
-      - Fri, 08 Nov 2019 16:15:42 GMT
+      - Tue, 17 Mar 2020 17:35:24 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '44'
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Server:
-      - nginx/1.12.1
+      - nginx/1.16.1
       X-Powered-By:
       - Express
       Access-Control-Allow-Origin:
@@ -49,10 +47,10 @@ http_interactions:
       Access-Control-Expose-Headers:
       - X-Parse-Job-Status-Id, X-Parse-Push-Status-Id
       Etag:
-      - W/"2c-+k4uWWG73dP4Qb3gi22c7QTs1p8"
+      - W/"31-636TouEIUsGr5Zjkgtr35+7c+GY"
     body:
-      encoding: UTF-8
-      string: '{"code":209,"error":"Invalid session token"}'
-    http_version: 
-  recorded_at: Fri, 08 Nov 2019 16:15:42 GMT
-recorded_with: VCR 5.0.0
+      encoding: ASCII-8BIT
+      string: '{"code":101,"error":"Invalid username/password."}'
+    http_version: null
+  recorded_at: Tue, 17 Mar 2020 17:35:24 GMT
+recorded_with: VCR 5.1.0
