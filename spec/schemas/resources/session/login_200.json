@@ -1,0 +1,362 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "required": [
+    "objectId",
+    "username",
+    "createdAt",
+    "updatedAt",
+    "notificationPrefs",
+    "appDC",
+    "specializationList",
+    "email",
+    "fullName",
+    "countryId",
+    "termsAndPolicyVersion",
+    "crmv",
+    "crmvStateId",
+    "stateId",
+    "occupationId",
+    "weeklyAppointment",
+    "ACL",
+    "sessionToken"
+  ],
+  "properties": {
+    "objectId": {
+      "$id": "#/properties/objectId",
+      "type": "string",
+      "title": "The Objectid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "PWVvhOhClw"
+      ]
+    },
+    "username": {
+      "$id": "#/properties/username",
+      "type": "string",
+      "title": "The Username Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "muletest@mule.com.br"
+      ]
+    },
+    "createdAt": {
+      "$id": "#/properties/createdAt",
+      "type": "string",
+      "title": "The Createdat Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-03-17T17:30:24.731Z"
+      ]
+    },
+    "updatedAt": {
+      "$id": "#/properties/updatedAt",
+      "type": "string",
+      "title": "The Updatedat Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-03-17T17:30:53.419Z"
+      ]
+    },
+    "notificationPrefs": {
+      "$id": "#/properties/notificationPrefs",
+      "type": "object",
+      "title": "The Notificationprefs Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "streaming_app": true,
+          "vetsmart_push": true,
+          "vetsmart_email": true,
+          "vetsmart_app": true,
+          "streaming_push": true,
+          "streaming_email": true
+        }
+      ],
+      "required": [
+        "vetsmart_push",
+        "streaming_push",
+        "vetsmart_email",
+        "streaming_app",
+        "streaming_email",
+        "vetsmart_app"
+      ],
+      "properties": {
+        "vetsmart_push": {
+          "$id": "#/properties/notificationPrefs/properties/vetsmart_push",
+          "type": "boolean",
+          "title": "The Vetsmart_push Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "streaming_push": {
+          "$id": "#/properties/notificationPrefs/properties/streaming_push",
+          "type": "boolean",
+          "title": "The Streaming_push Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "vetsmart_email": {
+          "$id": "#/properties/notificationPrefs/properties/vetsmart_email",
+          "type": "boolean",
+          "title": "The Vetsmart_email Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "streaming_app": {
+          "$id": "#/properties/notificationPrefs/properties/streaming_app",
+          "type": "boolean",
+          "title": "The Streaming_app Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "streaming_email": {
+          "$id": "#/properties/notificationPrefs/properties/streaming_email",
+          "type": "boolean",
+          "title": "The Streaming_email Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "vetsmart_app": {
+          "$id": "#/properties/notificationPrefs/properties/vetsmart_app",
+          "type": "boolean",
+          "title": "The Vetsmart_app Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        }
+      }
+    },
+    "appDC": {
+      "$id": "#/properties/appDC",
+      "type": "boolean",
+      "title": "The Appdc Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "specializationList": {
+      "$id": "#/properties/specializationList",
+      "type": "array",
+      "title": "The Specializationlist Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": []
+    },
+    "email": {
+      "$id": "#/properties/email",
+      "type": "string",
+      "title": "The Email Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "muletest@mule.com.br"
+      ]
+    },
+    "fullName": {
+      "$id": "#/properties/fullName",
+      "type": "string",
+      "title": "The Fullname Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "muletest"
+      ]
+    },
+    "countryId": {
+      "$id": "#/properties/countryId",
+      "type": "string",
+      "title": "The Countryid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "BRA"
+      ]
+    },
+    "termsAndPolicyVersion": {
+      "$id": "#/properties/termsAndPolicyVersion",
+      "type": "string",
+      "title": "The Termsandpolicyversion Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "1.0"
+      ]
+    },
+    "crmv": {
+      "$id": "#/properties/crmv",
+      "type": "string",
+      "title": "The Crmv Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        ""
+      ]
+    },
+    "crmvStateId": {
+      "$id": "#/properties/crmvStateId",
+      "type": "string",
+      "title": "The Crmvstateid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        ""
+      ]
+    },
+    "stateId": {
+      "$id": "#/properties/stateId",
+      "type": "string",
+      "title": "The Stateid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        ""
+      ]
+    },
+    "occupationId": {
+      "$id": "#/properties/occupationId",
+      "type": "string",
+      "title": "The Occupationid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        ""
+      ]
+    },
+    "weeklyAppointment": {
+      "$id": "#/properties/weeklyAppointment",
+      "title": "The Weeklyappointment Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "ACL": {
+      "$id": "#/properties/ACL",
+      "type": "object",
+      "title": "The Acl Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "PWVvhOhClw": {
+            "read": true,
+            "write": true
+          },
+          "*": {
+            "read": true
+          }
+        }
+      ],
+      "required": [
+        "*",
+        "PWVvhOhClw"
+      ],
+      "properties": {
+        "*": {
+          "$id": "#/properties/ACL/properties/*",
+          "type": "object",
+          "title": "The * Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "read": true
+            }
+          ],
+          "required": [
+            "read"
+          ],
+          "properties": {
+            "read": {
+              "$id": "#/properties/ACL/properties/*/properties/read",
+              "type": "boolean",
+              "title": "The Read Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": false,
+              "examples": [
+                true
+              ]
+            }
+          }
+        },
+        "PWVvhOhClw": {
+          "$id": "#/properties/ACL/properties/PWVvhOhClw",
+          "type": "object",
+          "title": "The Pwvvhohclw Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "read": true,
+              "write": true
+            }
+          ],
+          "required": [
+            "read",
+            "write"
+          ],
+          "properties": {
+            "read": {
+              "$id": "#/properties/ACL/properties/PWVvhOhClw/properties/read",
+              "type": "boolean",
+              "title": "The Read Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": false,
+              "examples": [
+                true
+              ]
+            },
+            "write": {
+              "$id": "#/properties/ACL/properties/PWVvhOhClw/properties/write",
+              "type": "boolean",
+              "title": "The Write Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": false,
+              "examples": [
+                true
+              ]
+            }
+          }
+        }
+      }
+    },
+    "sessionToken": {
+      "$id": "#/properties/sessionToken",
+      "type": "string",
+      "title": "The Sessiontoken Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "r:5841a73186884ba55bbce70436c345be"
+      ]
+    }
+  }
+}

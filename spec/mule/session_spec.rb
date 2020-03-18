@@ -115,4 +115,40 @@ RSpec.describe Mule::Session, type: :model do
       end
     end
   end
+
+  describe '#login!', :vcr do
+    subject { described_class.login!(username, password) }
+
+    before { configuration_by_environments! }
+
+    let(:username) { 'muletest@mule.com.br' }
+
+    context 'with invalid password' do
+      let(:password) { '123456' }
+
+      it { expect { subject }.to raise_error(Mule::Resources::NotFoundError, "The session can't be found") }
+    end
+
+    context 'with valid password' do
+      let(:password) { 'mule123' }
+
+      it do
+        is_expected.to have_attributes(
+          object_id: nil,
+          session_token: 'r:fab1254c3f7428ef49e7d41874cd707c',
+          created_at: nil,
+          updated_at: nil
+        )
+      end
+      it do
+        expect(subject.user).to have_attributes(
+          object_id: 'PWVvhOhClw',
+          username: 'muletest@mule.com.br',
+          full_name: 'muletest',
+          created_at: Time.parse('2020-03-17T17:30:24.731Z'),
+          updated_at: Time.parse('2020-03-17T17:30:53.419Z')
+        )
+      end
+    end
+  end
 end

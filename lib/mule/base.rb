@@ -4,10 +4,26 @@ require 'time'
 
 module Mule
   class Base
+    class << self
+      def normalize(params)
+        params.each_with_object({}) { |hash, obj| obj[to_snake(hash[0]).to_sym] = hash[1] }
+      end
+
+      private
+
+      def to_snake(value)
+        value.to_s.gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2')
+             .gsub(/([a-z\d])([A-Z])/, '\1_\2')
+             .downcase
+      end
+    end
+
     def attributes!(params, accessors)
-      params.each_with_object({}) { |hash, obj| obj[to_snake(hash[0]).to_sym] = hash[1] }
-            .tap { |snaked_params| build_accessors!(snaked_params, accessors) }
-            .tap { timestamps! }
+      self
+        .class
+        .normalize(params)
+        .tap { build_accessors!(_1, accessors) }
+        .tap { timestamps! }
     end
 
     private
@@ -20,12 +36,6 @@ module Mule
     def build_accessors!(snaked_params, accessors)
       snaked_params.slice(*accessors)
                    .each { |key, value| instance_variable_set("@#{key}", value) }
-    end
-
-    def to_snake(value)
-      value.to_s.gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2')
-           .gsub(/([a-z\d])([A-Z])/, '\1_\2')
-           .downcase
     end
 
     def build_time(value)

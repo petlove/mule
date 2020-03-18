@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: get
-    uri: ENV[PARSE_URL]/parse/sessions/me
+    uri: ENV[PARSE_URL]/parse/login
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: '{"username":"muletest@mule.com.br","password":"mule123"}'
     headers:
       Content-Type:
       - application/json
@@ -13,10 +13,8 @@ http_interactions:
       - ENV[PARSE_APPLICATION_ID]
       X-Parse-Rest-Api-Key:
       - ENV[PARSE_REST_API_KEY]
-      X-Parse-Session-Token:
-      - ENV[PARSE_SESSION_TOKEN]
       User-Agent:
-      - Faraday v0.17.0
+      - Faraday v1.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -27,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 08 Nov 2019 16:15:42 GMT
+      - Tue, 17 Mar 2020 17:35:24 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -35,7 +33,7 @@ http_interactions:
       Connection:
       - keep-alive
       Server:
-      - nginx/1.12.1
+      - nginx/1.16.1
       X-Powered-By:
       - Express
       Access-Control-Allow-Origin:
@@ -49,10 +47,10 @@ http_interactions:
       Access-Control-Expose-Headers:
       - X-Parse-Job-Status-Id, X-Parse-Push-Status-Id
       Etag:
-      - W/"1a9-v44TXZLw5iptjXjTcvM0j9IXvFM"
+      - W/"273-giyPqYkhtDTAlZsBR1d450HEXhc"
     body:
       encoding: ASCII-8BIT
-      string: '{"objectId":"ENV[PARSE_SESSION_OBJECT_ID]","sessionToken":"ENV[PARSE_SESSION_TOKEN]","user":{"__type":"Pointer","className":"_User","objectId":"ENV[PARSE_USER_OBJECT_ID]"},"createdWith":{"action":"login","authProvider":"anonymous"},"restricted":false,"expiresAt":{"__type":"Date","iso":"2020-10-13T13:03:19.256Z"},"installationId":"1234","createdAt":"2019-10-14T13:03:19.256Z","updatedAt":"2019-10-14T13:03:19.256Z"}'
-    http_version:
-  recorded_at: Fri, 08 Nov 2019 16:15:42 GMT
-recorded_with: VCR 5.0.0
+      string: '{"objectId":"PWVvhOhClw","username":"muletest@mule.com.br","createdAt":"2020-03-17T17:30:24.731Z","updatedAt":"2020-03-17T17:30:53.419Z","notificationPrefs":{"vetsmart_push":true,"streaming_push":true,"vetsmart_email":true,"streaming_app":true,"streaming_email":true,"vetsmart_app":true},"appDC":true,"specializationList":[],"email":"muletest@mule.com.br","fullName":"muletest","countryId":"BRA","termsAndPolicyVersion":"1.0","crmv":"","crmvStateId":"","stateId":"","occupationId":"","weeklyAppointment":null,"ACL":{"*":{"read":true},"PWVvhOhClw":{"read":true,"write":true}},"sessionToken":"r:f2a4b369b4c5997e6155756fcd3028de"}'
+    http_version: null
+  recorded_at: Tue, 17 Mar 2020 17:35:24 GMT
+recorded_with: VCR 5.1.0
