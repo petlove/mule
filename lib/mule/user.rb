@@ -2,7 +2,7 @@
 
 module Mule
   class User < Base
-    ACCESSORS = %i[object_id username created_at updated_at full_name].freeze
+    ACCESSORS = %i[object_id username created_at updated_at full_name business_phone1].freeze
 
     attr_accessor(*ACCESSORS)
 

@@ -14,6 +14,7 @@ RSpec.describe Mule::User, type: :model do
           username: 'Linqueta',
           createdAt: '2019-10-07T19:34:46.660Z',
           updatedAt: '2019-10-14T13:03:18.917Z',
+          businessPhone1: "(11) 99440-1346",
           notificationPrefs: {
             vetsmart_push: true,
             streaming_app: true,
@@ -47,7 +48,8 @@ RSpec.describe Mule::User, type: :model do
           username: 'Linqueta',
           created_at: Time.parse('2019-10-07T19:34:46.660Z'),
           updated_at: Time.parse('2019-10-14T13:03:18.917Z'),
-          full_name: 'Linqueta linqueta'
+          full_name: 'Linqueta linqueta',
+          business_phone1: "(11) 99440-1346"
         )
       end
     end
@@ -59,7 +61,8 @@ RSpec.describe Mule::User, type: :model do
           username: 'Linqueta',
           created_at: '2019-10-07T19:34:46.660Z',
           updated_at: '2019-10-14T13:03:18.917Z',
-          full_name: 'Linqueta linqueta'
+          full_name: 'Linqueta linqueta',
+          business_phone1: "(11) 99440-1346"
         }
       end
 
@@ -69,7 +72,8 @@ RSpec.describe Mule::User, type: :model do
           username: 'Linqueta',
           created_at: Time.parse('2019-10-07T19:34:46.660Z'),
           updated_at: Time.parse('2019-10-14T13:03:18.917Z'),
-          full_name: 'Linqueta linqueta'
+          full_name: 'Linqueta linqueta',
+          business_phone1: "(11) 99440-1346"
         )
       end
     end
