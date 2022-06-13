@@ -209,7 +209,7 @@
       "title": "The Acl Schema",
       "required": [
         "*",
-        "uQ0SKvycQS"
+        "VatKQ8Tnie"
       ],
       "properties": {
         "*": {
@@ -231,8 +231,8 @@
             }
           }
         },
-        "uQ0SKvycQS": {
-          "$id": "#/properties/ACL/properties/uQ0SKvycQS",
+        "VatKQ8Tnie": {
+          "$id": "#/properties/ACL/properties/VatKQ8Tnie",
           "type": "object",
           "title": "The Uq0skvycqs Schema",
           "required": [
@@ -241,7 +241,7 @@
           ],
           "properties": {
             "read": {
-              "$id": "#/properties/ACL/properties/uQ0SKvycQS/properties/read",
+              "$id": "#/properties/ACL/properties/VatKQ8Tnie/properties/read",
               "type": "boolean",
               "title": "The Read Schema",
               "default": false,
@@ -250,7 +250,7 @@
               ]
             },
             "write": {
-              "$id": "#/properties/ACL/properties/uQ0SKvycQS/properties/write",
+              "$id": "#/properties/ACL/properties/VatKQ8Tnie/properties/write",
               "type": "boolean",
               "title": "The Write Schema",
               "default": false,

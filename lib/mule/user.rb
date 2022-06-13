@@ -10,8 +10,8 @@ module Mule
       attributes!(params, ACCESSORS)
     end
 
-    def self.find!(object_id)
-      new(Resources::User.find!(object_id).body)
+    def self.find!(object_id, vetsmart_session_token)
+      new(Resources::User.find!(object_id, vetsmart_session_token).body)
     end
   end
 end
