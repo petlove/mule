@@ -80,7 +80,7 @@ RSpec.describe Mule::User, type: :model do
   end
 
   describe '#find!', :vcr do
-    subject { described_class.find!(object_id) }
+    subject { described_class.find!(object_id, ENV['PARSE_SESSION_TOKEN']) }
 
     before { configuration_by_environments! }
 
