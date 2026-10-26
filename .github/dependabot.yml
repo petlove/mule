@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: bundler
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+      time: "09:00"
+      timezone: America/Sao_Paulo
+    # só security updates: version updates desligados (limit 0); security updates têm limite próprio
+    open-pull-requests-limit: 0
+    groups:
+      bundler-security:
+        applies-to: security-updates
+        patterns:
+          - "*"
